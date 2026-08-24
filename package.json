@@ -10,6 +10,10 @@
     "server.js",
     "resources/"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Daerhard/narrative-pipeline-development.git"
+  },
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"
   }
