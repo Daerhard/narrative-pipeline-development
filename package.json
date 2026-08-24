@@ -1,6 +1,6 @@
 {
   "name": "narrative-pipeline-development",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "MCP server exposing the Narrative Pipeline Development style guide and code examples as resources for Claude",
   "type": "module",
   "bin": {
