@@ -1,0 +1,16 @@
+{
+  "name": "narrative-pipeline-development",
+  "version": "0.2.0",
+  "description": "MCP server exposing the Narrative Pipeline Development style guide and code examples as resources for Claude",
+  "type": "module",
+  "bin": {
+    "narrative-pipeline-development": "./server.js"
+  },
+  "files": [
+    "server.js",
+    "resources/"
+  ],
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  }
+}
