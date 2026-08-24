@@ -1,4 +1,5 @@
 HELP.md
+.DS_Store
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
@@ -41,4 +42,3 @@ out/
 
 ### Node ###
 node_modules/
-package-lock.json
