@@ -23,10 +23,13 @@ import org.junit.platform.suite.api.Suite
 import java.util.Optional
 import features.customer.persistence.Customer as PersistenceCustomer
 
+private const val FEATURE_FILE_PATH = "customer/persistence"
+private const val GLUE_CONFIG = "customer.persistence,cucumber"
+
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("customer/persistence")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "customer.persistence,cucumber")
+@SelectClasspathResource(FEATURE_FILE_PATH)
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = GLUE_CONFIG)
 class CustomerRepositoryAdapterFeature
 
 class CustomerRepositoryAdapterTest {

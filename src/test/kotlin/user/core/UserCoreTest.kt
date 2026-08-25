@@ -24,10 +24,13 @@ import features.user.domain.UserService
 import features.user.domain.ports.UserRepositoryPort
 import user.factory.UserFactory
 
+private const val FEATURE_FILE_PATH = "user/domain"
+private const val GLUE_CONFIG = "user.core,cucumber"
+
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("user/core")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "user.core,cucumber")
+@SelectClasspathResource(FEATURE_FILE_PATH)
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = GLUE_CONFIG)
 class UserCoreFeature
 
 class UserCoreTest {

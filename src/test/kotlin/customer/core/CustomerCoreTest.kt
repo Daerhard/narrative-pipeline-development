@@ -23,10 +23,13 @@ import org.junit.platform.suite.api.IncludeEngines
 import org.junit.platform.suite.api.SelectClasspathResource
 import org.junit.platform.suite.api.Suite
 
+private const val FEATURE_FILE_PATH = "customer/domain"
+private const val GLUE_CONFIG = "customer.core,cucumber"
+
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("customer/core")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "customer.core,cucumber")
+@SelectClasspathResource(FEATURE_FILE_PATH)
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = GLUE_CONFIG)
 class CustomerCoreFeature
 
 class CustomerCoreTest {
