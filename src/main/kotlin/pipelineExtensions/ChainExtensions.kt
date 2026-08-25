@@ -8,6 +8,10 @@ inline fun <T> T.proceedIf(check: (T) -> Boolean): T? {
     return if (check(this)) this else null
 }
 
+inline fun <T, R> T.pair(block: (T) -> R): Pair<R, T> {
+    return Pair(block(this), this)
+}
+
 suspend inline fun <T> T.suspendProceedIf(
     check: suspend (T) -> Boolean
 ): T? {

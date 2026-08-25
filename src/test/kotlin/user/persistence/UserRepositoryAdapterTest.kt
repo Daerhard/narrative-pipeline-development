@@ -23,10 +23,13 @@ import org.junit.platform.suite.api.Suite
 import features.user.domain.User as DomainUser
 import user.factory.UserFactory
 
+private const val FEATURE_FILE_PATH = "user/persistence"
+private const val GLUE_CONFIG = "user.persistence,cucumber"
+
 @Suite
 @IncludeEngines("cucumber")
-@SelectClasspathResource("user/persistence")
-@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "user.persistence,cucumber")
+@SelectClasspathResource(FEATURE_FILE_PATH)
+@ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = GLUE_CONFIG)
 class UserRepositoryAdapterFeature
 
 class UserRepositoryAdapterTest {
